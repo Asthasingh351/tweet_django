@@ -1,0 +1,12 @@
+{% extends "layout.html" %} {% block title %} astha tweet {%endblock%}
+
+{% block content %}
+
+    <h1 class="text-center mt-5">confirm delete?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="button" class="btn btn-danger">delete</button>
+        <a class="btn btn-success" href="{% url 'tweet_list' %}">cancel</a>
+    </form>
+
+{% endblock %}
